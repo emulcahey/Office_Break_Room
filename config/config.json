@@ -1,0 +1,21 @@
+{
+    "development": {
+        "server": {
+            "port": 3001,
+            "hostname": "localhost"
+        },
+        "database": {
+            "host": "localhost",
+            "user": "postgres",
+            "password": "password",
+            "database": ""
+        },
+        "api": {
+        },
+        "logging": {
+        },
+        "features": {
+        }
+    },
+
+}

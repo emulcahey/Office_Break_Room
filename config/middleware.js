@@ -15,7 +15,6 @@ const errorHandler = (err, req, res, next) => {
     res.status(500).send('Something broke!');
 };
 
-app.use(errorHandler);
 
 // Routes
 app.get('/', (req, res) => {
@@ -26,6 +25,9 @@ app.get('/', (req, res) => {
 app.get('', isAuthenticated, (req, res) => {
     res.send('');
 })
+
+//error handling middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

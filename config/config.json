@@ -5,17 +5,18 @@
             "hostname": "localhost"
         },
         "database": {
+            "dialect": "postgres",
             "host": "localhost",
-            "user": "postgres",
+            "port": 5432,
+            "username": "postgres",
             "password": "password",
-            "database": ""
+            "database": "your_database_name"
         },
-        "api": {
+        "session": {
+            "secret": "your_session_secret"
         },
-        "logging": {
-        },
-        "features": {
+        "authentication": {
+            "bcryptSaltRounds": 10
         }
-    },
-
+    }
 }

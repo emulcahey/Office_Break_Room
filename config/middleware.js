@@ -1,11 +1,12 @@
-//body-parser
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 const express = require('express');
 const app = express();
 
 app.use(express.static('public'));
+
+// Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 const isAuthenticated = (req, res, next) => {
     if (req.isAuthenticated()) {

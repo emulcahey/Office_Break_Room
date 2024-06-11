@@ -1,10 +1,10 @@
 
-// Імпорт моделей
+
 const User = require('./models/User');
 const Game = require('./models/Game');
 const Score = require('./models/Score');
 
-// Визначення асоціацій між моделями
+
 Game.hasMany(Score, { foreignKey: 'gameId' });
 User.hasMany(Score, { foreignKey: 'userId' });
 Score.belongsTo(Game, { foreignKey: 'gameId' });

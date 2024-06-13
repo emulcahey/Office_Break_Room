@@ -1,0 +1,40 @@
+<div class="row">
+  <!-- Large games Div-->
+  <div class="col-9">
+    <!-- Snake Div-->
+    <div class="centerContainer">
+        <h2 class="divider" style="color:#CC5500;">
+            Snake with GoogleMaps
+        </h2>    
+        <h3>Get ready for a twist on the old-fashion snakes game! control a train that collects passengers. The more passengers you collect, the longer your train becomes. No one wants to be on a cramped train. You can choose what kind of train and what location you'd like to pick up riders.</h3>
+        <div id="displaySnake"></div>
+        <button id="playButtonSnake" onclick="CreateIframeElementSnake()">
+            Play Snake Game
+        </button>
+        <button id="closeButtonSnake" class="hidden" onclick="RemoveIframeElementSnake()">
+            Close Snake Game
+        </button>
+    </div>
+    <!-- 2048 Div-->
+    <div class="centerContainer">
+        <h2 class="divider" style="color:#CC5500;">
+            2048 Game
+        </h2>    
+        <h3>If numbers are what you crave, click through the math in this puzzle game.</h3>
+        <div id="display2048"></div>
+        <button id="playButton2048" onclick="CreateIframeElement2048()">
+            Play 2048 Game
+        </button>
+        <button id="closeButton2048" class="hidden" onclick="RemoveIframeElement2048()">
+            Close 2048 Game
+        </button>
+    </div>
+  </div>
+  <!-- High Scores Div-->
+  <div class="col-3 leftBoarder">
+    <h4 class="divider" style="color:#CC5500;">
+      Highscores
+    </h4>    
+    <h5>Here are the current team member high scores!</h5>
+  </div>
+</div>

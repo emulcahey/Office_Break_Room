@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// Checks to see if the user has logged in for the session, else it will redirect to login page
 const isAuthenticated = (req, res, next) => {
     if (req.isAuthenticated()) {
         return next();

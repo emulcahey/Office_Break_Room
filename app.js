@@ -51,11 +51,4 @@ const errorHandler = (err, req, res, next) => {
 };
 app.use(errorHandler);
 
-// Sync database and start the server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-  });
-});
-
 module.exports = app;

@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 require('dotenv').config();
 
+const bootstrap = require('bootstrap');
 const { sequelize } = require('./models');
 
 const app = express();

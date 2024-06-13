@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 require('dotenv').config();
 
+const bootstrap = require('bootstrap');
 const { sequelize } = require('./models');
 
 const app = express();
@@ -50,12 +51,5 @@ const errorHandler = (err, req, res, next) => {
   res.status(500).send('Something broke!');
 };
 app.use(errorHandler);
-
-// Sync database and start the server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-  });
-});
 
 module.exports = app;

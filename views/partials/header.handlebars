@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #stopwatch {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+        .controls {
+            margin: 10px;
+        }
+        .controls button {
+            margin-right: 5px;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Header</h1>
+        <div id="stopwatch">00:00:00</div>
+        <div class="controls">
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="stopStopwatch()">Stop</button>
+            <button onclick="resetStopwatch()">Reset</button>
+            <button onclick="toggleDarkMode()">Dark/Light</button>
+        </div>
+    </header>
+
+    <script>
+        let stopwatchInterval;
+        let elapsedTime = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        function startStopwatch() {
+            if (!stopwatchInterval) {
+                const startTime = Date.now() - elapsedTime;
+                stopwatchInterval = setInterval(() => {
+                    elapsedTime = Date.now() - startTime;
+                    document.getElementById('stopwatch').textContent = timeFormatter(elapsedTime);
+                }, 1000);
+            }
+        }
+
+        function stopStopwatch() {
+            clearInterval(stopwatchInterval);
+            stopwatchInterval = null;
+        }
+
+        function resetStopwatch() {
+            stopStopwatch();
+            elapsedTime = 0;
+            document.getElementById('stopwatch').textContent = '00:00:00';
+        }
+
+        function timeFormatter(timeInMillis) {
+            let totalSeconds = Math.floor(timeInMillis / 1000);
+            let hours = Math.floor(totalSeconds / 3600);
+            let minutes = Math.floor((totalSeconds % 3600) / 60);
+            let seconds = totalSeconds % 60;
+
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>

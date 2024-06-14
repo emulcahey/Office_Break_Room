@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+/*title font*/
+.audiowidefont{
+  font-family: "Audiowide", sans-serif;
+}
+
+/*body  font*/
+.monacofont{
+  font-family: "monaco", monospace;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

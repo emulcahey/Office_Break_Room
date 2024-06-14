@@ -5,9 +5,9 @@ const { isAuthenticated } = require('../config/middleware');
 const router = express.Router();
 
 // Get user profile route
-router.get('/dashboard', isAuthenticated, getProfile);
+router.get('/dashboard', getProfile);
 
 // Update user profile route
-router.post('/update', isAuthenticated, updateProfile);
+// router.post('/update', isAuthenticated, updateProfile);
 
 module.exports = router;

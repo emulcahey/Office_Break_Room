@@ -1,8 +1,8 @@
 
 
-const User = require('./models/User');
-const Game = require('./models/Game');
-const Score = require('./models/Score');
+const User = require('./user');
+const Game = require('./game');
+const Score = require('./score');
 
 
 Game.hasMany(Score, { foreignKey: 'gameId' });

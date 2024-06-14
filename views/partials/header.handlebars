@@ -1,9 +1,26 @@
-<!DOCTYPE html>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/auth/login">Login</a></li>
+            <li><a href="/auth/register">Register</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
+            <li><a href="/users">Users</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    {{!-- <style>
         body {
             font-family: Arial, sans-serif;
             transition: background-color 0.3s, color 0.3s;
@@ -22,18 +39,34 @@
             background-color: #333;
             color: #f9f9f9;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>My Header</h1>
-        <div id="stopwatch">00:00:00</div>
-        <div class="controls">
-            <button onclick="startStopwatch()">Start</button>
-            <button onclick="stopStopwatch()">Stop</button>
-            <button onclick="resetStopwatch()">Reset</button>
-            <button onclick="toggleDarkMode()">Dark/Light</button>
+    </style> --}}
+{{!-- </head> --}}
+{{!-- <body>
+       <header>
+        <div class="container display-flex align-center col-3">
+            <img src="/images/logo.png" alt="Company Logo" class="logo">
+            </div>
+        <div class="display-flex align-center col-3">            
+            <h1>Welcome to your Break Room</h1>
+            <h3>A place to hardly work, because you work hard</h3>
+            </div>
+        <div class="display-flex align-center col-3"> 
+            <div id="stopwatch">00:00:00</div>
+            <div class="controls">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="stopStopwatch()">Stop</button>
+                <button onclick="resetStopwatch()">Reset</button>
+                <button onclick="toggleDarkMode()">Dark/Light</button>
+            </div>
         </div>
+        <nav>
+    <a href="/">Dashboard</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
     </header>
 
     <script>
@@ -86,4 +119,4 @@
         }
     </script>
 </body>
-</html>
+</html> --}}

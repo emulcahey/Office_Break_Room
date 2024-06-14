@@ -5,8 +5,8 @@ const CreateIframeElementSnake = () => {
   
     // setting the values for the attributes.
     el.src = `https://snake.googlemaps.com/`;
-    el.width = "600px";
-    el.height = "400px";
+    el.width = "90%";
+    el.height = "600px";
   
     // Adding the created iframe to div as a child element
     document.getElementById("displaySnake").appendChild(el);
@@ -41,7 +41,7 @@ const CreateIframeElement2048 = () => {
   
     // setting the values for the attributes.
     el.src = `https://play2048.co/`;
-    el.width = "500px";
+    el.width = "90%";
     el.height = "800px";
   
     // Adding the created iframe to div as a child element
@@ -68,4 +68,76 @@ playButton2048.addEventListener('click', () => {
 closeButton2048.addEventListener('click', () => {
     closeButton2048.classList.add('hidden');
     playButton2048.classList.remove('hidden');
+});
+
+//Minesweeper Iframe creator
+const CreateIframeElementMinesweeper = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://minesweeper.one/`;
+    el.width = "90%";
+    el.height = "600px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("displayMinesweeper").appendChild(el);
+}
+
+//Minesweeper Iframe closer
+const RemoveIframeElementMinesweeper = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("displayMinesweeper")
+        .removeChild(document
+        .getElementById("displayMinesweeper").lastChild);
+}
+  
+//Minesweeper button controllers
+const playButtonMinesweeper = document.getElementById('playButtonMinesweeper');
+const closeButtonMinesweeper = document.getElementById('closeButtonMinesweeper');
+  
+playButtonMinesweeper.addEventListener('click', () => {
+    playButtonMinesweeper.classList.add('hidden');
+    closeButtonMinesweeper.classList.remove('hidden');
+});
+
+closeButtonMinesweeper.addEventListener('click', () => {
+    closeButtonMinesweeper.classList.add('hidden');
+    playButtonMinesweeper.classList.remove('hidden');
+});
+
+//WordSearch Iframe creator
+const CreateIframeElementWordSearch = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://word-search-puzzles.appspot.com/`;
+    el.width = "90%";
+    el.height = "600px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("displayWordSearch").appendChild(el);
+}
+
+//WordSearch Iframe closer
+const RemoveIframeElementWordSearch = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("displayWordSearch")
+        .removeChild(document
+        .getElementById("displayWordSearch").lastChild);
+}
+  
+//Snake button controllers
+const playButtonWordSearch = document.getElementById('playButtonWordSearch');
+const closeButtonWordSearch = document.getElementById('closeButtonWordSearch');
+  
+playButtonWordSearch.addEventListener('click', () => {
+    playButtonWordSearch.classList.add('hidden');
+    closeButtonWordSearch.classList.remove('hidden');
+});
+
+closeButtonWordSearch.addEventListener('click', () => {
+    closeButtonWordSearch.classList.add('hidden');
+    playButtonWordSearch.classList.remove('hidden');
 });

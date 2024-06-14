@@ -1,13 +1,34 @@
 @charset "UTF-8";
 
-/*title font*/
+/* title font */
 .audiowidefont{
   font-family: "Audiowide", sans-serif;
+  color: #c0483b;
 }
 
-/*body  font*/
+/* body  font */
 .monacofont{
   font-family: "monaco", monospace;
+  color: #794a3a;
+}
+
+/* glow score title orange */
+h6.a{
+  font-family: "Audiowide", sans-serif;
+  color: #f57f5b;
+  text-shadow: #f7997c 1px 0 10px;
+}
+
+/* glow score title yellow */
+h7.a{
+  font-family: "monaco", monospace;
+  color: #faca78;
+  text-shadow: #967948 1px 0 10px;
+}
+
+/* background color light blue */
+.backGroundColor{
+  background-color: #68c7c1; 
 }
 
 :root {
@@ -10814,44 +10835,58 @@ section {
   padding-bottom: 9rem;
 }
 
-/*used for iframe buttons*/
+/* basic button colors */
+.gameButtonStyle{
+  background-color: #F57F5B;
+  color: #FACA78;
+  border: none;
+  border-radius: 6px;
+}
+
+/* hover over button colors */
+button:hover {
+    color: #F57F5B;
+    background-color: #FACA78;
+}
+
+/* hides iframe buttons */
 .hidden {
-    display: none;
-  }
-  
+  display: none;
+}
+
 /* Rounded border ues around titles*/
 hr.rounded {
-    border-top: 8px solid #bbb;
-    border-radius: 5px;
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
-  
+
 /*used around titles*/
 .divider {
-    font-size: 30px;
-    display: flex;
-    align-items: center;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
 }
-  
+
 /*used around titles*/
 .divider::before, .divider::after {
-    flex: 1;
-    content: '';
-    padding: 3px;
-    background-color: #002366;
-    margin: 5px;
-    border-radius: 5px;
+  flex: 1;
+  content: '';
+  padding: 3px;
+  background-color: #FACA78;
+  margin: 5px;
+  border-radius: 5px;
 }
-  
+
 /*used for iframe divs*/
 .centerContainer{  
-    text-align: center;
-    padding-bottom: 50px;
+  text-align: center;
+  padding-bottom: 50px;
 }
-  
+
 /*used for highscores div*/
 .leftBoarder{
-    border-left: 5px;
-    border-style: none none none groove;
-    padding: 10px;
-    border-left-color: #CC5500; 
+  border-left: 5px;
+  border-style: none none none groove;
+  padding: 10px;
+  border-left-color: #DD5341; 
 }

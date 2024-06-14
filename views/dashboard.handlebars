@@ -4,7 +4,7 @@
     <!-- Snake Div-->
     <div class="centerContainer">
         <h2 class="divider" style="color:#CC5500;">
-            Snake with GoogleMaps
+            Snake in GoogleMaps
         </h2>    
         <h3>Get ready for a twist on the old-fashion snakes game! control a train that collects passengers. The more passengers you collect, the longer your train becomes. No one wants to be on a cramped train. You can choose what kind of train and what location you'd like to pick up riders.</h3>
         <div id="displaySnake"></div>
@@ -18,15 +18,43 @@
     <!-- 2048 Div-->
     <div class="centerContainer">
         <h2 class="divider" style="color:#CC5500;">
-            2048 Game
+            2048
         </h2>    
-        <h3>If numbers are what you crave, click through the math in this puzzle game.</h3>
+        <h3>If numbers are what you crave, click through the math in this puzzle game. Can you get all the way to 2^11?</h3>
         <div id="display2048"></div>
         <button id="playButton2048" onclick="CreateIframeElement2048()">
             Play 2048 Game
         </button>
         <button id="closeButton2048" class="hidden" onclick="RemoveIframeElement2048()">
             Close 2048 Game
+        </button>
+    </div>
+    <!-- Minesweeper Div-->
+    <div class="centerContainer">
+        <h2 class="divider" style="color:#CC5500;">
+            Minesweeper
+        </h2>    
+        <h3>Please be careful where you step. Before walking around, clear the area of all mines. For a challenge, don't use the flag or mine symbol while playing.</h3>
+        <div id="displayMinesweeper"></div>
+        <button id="playButtonMinesweeper" onclick="CreateIframeElementMinesweeper()">
+            Play Minesweeper Game
+        </button>
+        <button id="closeButtonMinesweeper" class="hidden" onclick="RemoveIframeElementMinesweeper()">
+            Close Minesweeper Game
+        </button>
+    </div>
+        <!-- Word Search Div-->
+    <div class="centerContainer">
+        <h2 class="divider" style="color:#CC5500;">
+            Word Search
+        </h2>    
+        <h3>Calm and collected minds can thrive with this game. How fast can you find all the words?</h3>
+        <div id="displayWordSearch"></div>
+        <button id="playButtonWordSearch" onclick="CreateIframeElementWordSearch()">
+            Play Word Search Game
+        </button>
+        <button id="closeButtonWordSearch" class="hidden" onclick="RemoveIframeElementWordSearch()">
+            Close Word Search Game
         </button>
     </div>
   </div>

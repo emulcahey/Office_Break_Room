@@ -1,5 +1,3 @@
-
-
 const User = require('./models/User');
 const Game = require('./models/Game');
 const Score = require('./models/Score');

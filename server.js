@@ -73,7 +73,3 @@ const errorHandler = (err, req, res, next) => {
 app.use(errorHandler);
 
 // module.exports = app;
-
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});

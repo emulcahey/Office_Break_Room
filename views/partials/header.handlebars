@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{{!-- <!DOCTYPE html>
+<html lang="en"> --}}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             transition: background-color 0.3s, color 0.3s;
         }
         #stopwatch {
-            font-size: 1.5em;
+            {{!-- font-size: 1.5em; --}}
             margin: 10px;
         }
         .controls {
@@ -25,16 +26,36 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Header</h1>
-        <div id="stopwatch">00:00:00</div>
-        <div class="controls">
-            <button onclick="startStopwatch()">Start</button>
-            <button onclick="stopStopwatch()">Stop</button>
-            <button onclick="resetStopwatch()">Reset</button>
-            <button onclick="toggleDarkMode()">Dark/Light</button>
+    <div id="header" class="container-fluid">
+        <div class="row">
+<!-- Navigation dropdown-->
+            {{!-- <div class="col-lg-1">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href=("playButtonSnake")>Button Snake</a>
+                        <a class="dropdown-item" href="#frame2">Frame 2</a>
+                    </div>
+                </div>
+            </div> --}}
+            
+            <div class="col-lg-6">
+                <h1>Take a break!</h1>
+            </div>
+            <div class="col-lg-3" id="stopwatch">
+                <div id="stopwatch">00:00:00</div>
+                <div class="controls">
+                    <button onclick="startStopwatch()">Start</button>
+                    <button onclick="stopStopwatch()">Stop</button>
+                    <button onclick="resetStopwatch()">Reset</button>
+                    <button onclick="toggleDarkMode()">Dark/Light</button>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+
 
     <script>
         let stopwatchInterval;

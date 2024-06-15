@@ -128,7 +128,7 @@ const RemoveIframeElementWordSearch = () => {
         .getElementById("displayWordSearch").lastChild);
 }
   
-//Snake button controllers
+//WordSearch button controllers
 const playButtonWordSearch = document.getElementById('playButtonWordSearch');
 const closeButtonWordSearch = document.getElementById('closeButtonWordSearch');
   

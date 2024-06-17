@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        
+        console.log('Form submitted!');
         const formData = new FormData(loginForm);
         const username = formData.get('username');
         const password = formData.get('password');

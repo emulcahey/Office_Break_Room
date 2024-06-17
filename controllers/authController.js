@@ -3,6 +3,7 @@ const User = require('../models/user');
 
 // Register a new user
 const register = async (req, res) => {
+  console.log('hit the register function')
   try {
     // Hash the user's password before saving it to the database
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -17,12 +18,13 @@ const register = async (req, res) => {
     res.redirect('/dashboard');
   } catch (error) {
     // Handle errors during registration
-    res.status(500).json({ error: 'Error registering user' });
+    res.status(500).json({ error: 'Error registering user' }); 
   }
 };
 
 // Log in an existing user
 const login = async (req, res) => {
+  console.log('hit the login function')
   try {
     // Find the user by email
     const user = await User.findOne({ where: { email: req.body.email } });

@@ -1,5 +1,26 @@
 
-<div class="container-fluid">
+<link rel="stylesheet" href="/css/style.css">
+
+		<div class="login">
+			<h1>Login</h1>
+			<form action="/auth/loginByUsername" method="post">
+				<label for="username">
+					<!-- font awesome icon -->
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+
+
+{{!-- actual style layout, above is basic form}}
+
+{{!-- <div class="container-fluid">
   <div class="login-card, col-lg-4">
     <h6 class="page-title, audiowidefont">Login</h6>
     <form class="form login-form">
@@ -18,8 +39,10 @@
   </div>
   <div class="login-card, col-lg-4">
     <h6 class="page-title, audiowidefont">Signup</h6>
-    <form class="form signup-form">
-      <div class="form-group, monacofont">
+
+    <form action="/register" method="POST" class="form signup-form">
+      <div class="form-group">
+
         <label for="username-signup">Username:</label>
         <input class="form-input" type="text" id="username-signup" />
       </div>
@@ -36,6 +59,6 @@
       </div>
     </form>
   </div>
-</div>
+</div> --}}
 
-<script src="./js/login.js"></script>
+{{!-- <script src="./js/login.js"></script> --}}

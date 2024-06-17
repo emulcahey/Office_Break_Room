@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 require('dotenv').config();
 
-const { sequelize } = require('./models');
+// const { sequelize } = require('./models');
 
 const PORT = process.env.PORT || 3001;
 
@@ -21,6 +21,15 @@ const hbs = exphbs.create({});
 
 const app = express();
 
+const connection = require('./config/connection');
+
+connection.sync()
+  .then(() => {
+    console.log('Database synced');
+  } )
+  .catch((err) => {
+    console.error('Error syncing database:', err);
+  });
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)

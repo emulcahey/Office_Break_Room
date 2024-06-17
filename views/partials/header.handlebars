@@ -26,23 +26,28 @@
     </style>
 </head>
 <body>
-    <div id="header" class="container-fluid">
+    <div id="header" class="container pt-2 mt-2 pb-2 mb-2">
         <div class="row">
-<!-- Navigation dropdown-->
-            {{!-- <div class="col-lg-1">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Games
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href=("playButtonSnake")>Button Snake</a>
-                        <a class="dropdown-item" href="#frame2">Frame 2</a>
-                    </div>
+            <div class="col-md-5">
+                <h1 class="display-1 audiowidefont divider">Take a break!</h1>
+            </div>
+            <div class="col-md-4">
+                <div id="stopwatch" class="monacofont">00:00:00</div>
+                <div class="controls monacofont">
+                    <button onclick="startStopwatch()" class="gameButtonStyle">Start</button>
+                    <button onclick="stopStopwatch()" class="gameButtonStyle">Stop</button>
+                    <button onclick="resetStopwatch()" class="gameButtonStyle">Reset</button>
                 </div>
-            </div> --}}
+            </div>
+            <div class="col-md-3">
+                <button onclick="toggleDarkMode()" class="controls gameButtonStyle">Dark/Light</button>
+                <button onclick="window.location.href='/logout'" class="gameButtonStyle">Logout</button>
+            </div>
+        </div>
+    </div>
             
-            <div class="col-lg-6">
-                <h1>Take a break!</h1>
+            {{!-- <div class="col-lg-6">
+                <h1 class="audiowidefont">Take a break!</h1>
             </div>
             <div class="col-lg-3" id="stopwatch">
                 <div id="stopwatch">00:00:00</div>
@@ -51,10 +56,11 @@
                     <button onclick="stopStopwatch()">Stop</button>
                     <button onclick="resetStopwatch()">Reset</button>
                     <button onclick="toggleDarkMode()">Dark/Light</button>
+                    <button onclick="window.location.href='/logout'">Logout</button>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> --}}
+    {{!-- </div> --}}
 
 
     <script>

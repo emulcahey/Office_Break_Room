@@ -29,7 +29,6 @@ h7.a{
   background-color: #68c7c1; 
 }
 
-
 /* basic button colors */
 .gameButtonStyle{
   background-color: #F57F5B;
@@ -42,6 +41,11 @@ h7.a{
 button:hover {
     color: #F57F5B;
     background-color: #FACA78;
+}
+
+input[type="submit"].btn:hover {
+  color: #F57F5B;
+  background-color: #FACA78;
 }
 
 /* hides iframe buttons */
@@ -84,4 +88,13 @@ hr.rounded {
   border-style: none none none groove;
   padding: 10px;
   border-left-color: #DD5341; 
+}
+
+.userInfoForm {
+  width: 80%;
+  padding: 5px 5px;
+  margin: 0 auto;
+  background: #faca7871;
+  border-radius: 8px; 
+  border-color: #794a3a73;
 }

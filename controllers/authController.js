@@ -3,36 +3,36 @@ const User = require('../models/user');
 
 // Register a new user
 const register = async (req, res) => {
-  console.log('hit the register function')
+  
   try {
-    // Hash the user's password before saving it to the database
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    // Create a new user with the provided username, email, and hashed password
+    // Create a new user with the provided username, email, and password (hooks.beforeCreate will hash)
     const user = await User.create({
-      username: req.body.username,
+      "userName": req.body.username,
       email: req.body.email,
-      password: hashedPassword,
+      password: req.body.password,
     });
+
     // Store the user in the session and redirect to the dashboard
     req.session.user = user;
     res.redirect('/dashboard');
   } catch (error) {
+    console.error(error);
     // Handle errors during registration
     res.status(500).json({ error: 'Error registering user' }); 
   }
 };
 
 // Log in an existing user
-const login = async (req, res) => {
-  console.log('hit the login function')
+const loginByUsername = async (req, res) => {
+  
   try {
-    // Find the user by email
-    const user = await User.findOne({ where: { email: req.body.email } });
+    
+    const user = await User.findOne({ where: { "userName": req.body.username } });
     // Check if the user exists and the password is correct
     if (user && (await bcrypt.compare(req.body.password, user.password))) {
       // Store the user in the session and redirect to the dashboard
       req.session.user = user;
-      res.redirect('/dashboard');
+      res.redirect('../users/dashboard');
     } else {
       // Handle invalid credentials
       res.status(401).json({ error: 'Invalid credentials' });
@@ -56,4 +56,4 @@ const logout = (req, res) => {
   });
 };
 
-module.exports = { register, login, logout };
+module.exports = { register, loginByUsername, logout };

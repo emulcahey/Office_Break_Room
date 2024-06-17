@@ -11,6 +11,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
+
 // 
 // const hbs = exphbs.create({
 //   extname: '.handlebars',

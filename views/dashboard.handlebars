@@ -7,12 +7,12 @@
         <h2 class="divider audiowidefont">
             Snake in GoogleMaps
         </h2>    
-        <h3 class="monacofont">Get ready for a twist on the old-fashion snakes game! control a train that collects passengers. The more passengers you collect, the longer your train becomes. No one wants to be on a cramped train. You can choose what kind of train and what location you'd like to pick up riders.</h3>
+        <h3 class="monacofont">Get ready for a twist on the old-fashion snakes game! control a train that collects passengers. You can choose the type of train and what location.</h3>
         <div id="displaySnake"></div>
-        <button id="playButtonSnake" class="audiowidefont gameButtonColor" onclick="CreateIframeElementSnake()">
+        <button action="/games/snake" method="get" id="playButtonSnake" class="audiowidefont gameButtonColor gameButtonStyle" onclick="CreateIframeElementSnake()">
             Play Snake Game
         </button>
-        <button id="closeButtonSnake" class="hidden audiowidefont gameButtonColor" onclick="RemoveIframeElementSnake()">
+        <button action="/games/closeGame" method="get" id="closeButtonSnake" class="hidden audiowidefont gameButtonColor gameButtonStyle" onclick="RemoveIframeElementSnake()">
             Close Snake Game
         </button>
     </div>
@@ -23,10 +23,10 @@
         </h2>    
         <h3 class="monacofont">If numbers are what you crave, click through the math in this puzzle game. Can you get all the way to 2^11?</h3>
         <div id="display2048"></div>
-        <button id="playButton2048" class="audiowidefont gameButtonColor" onclick="CreateIframeElement2048()">
+        <button action="/games/2048" method="get" id="playButton2048" class="audiowidefont gameButtonColor gameButtonStyle" onclick="CreateIframeElement2048()">
             Play 2048 Game
         </button>
-        <button id="closeButton2048" class="hidden audiowidefont gameButtonColor" onclick="RemoveIframeElement2048()">
+        <button id="closeButton2048" class="hidden audiowidefont gameButtonColor gameButtonStyle" onclick="RemoveIframeElement2048()">
             Close 2048 Game
         </button>
     </div>
@@ -37,10 +37,10 @@
         </h2>    
         <h3 class="monacofont">Please be careful where you step. Before walking around, clear the area of all mines. For a challenge, don't use the flag or mine symbol while playing.</h3>
         <div id="displayMinesweeper"></div>
-        <button id="playButtonMinesweeper" class="audiowidefont gameButtonColor" onclick="CreateIframeElementMinesweeper()">
+        <button id="playButtonMinesweeper" class="audiowidefont gameButtonColor gameButtonStyle" onclick="CreateIframeElementMinesweeper()">
             Play Minesweeper Game
         </button>
-        <button id="closeButtonMinesweeper" class="hidden audiowidefont gameButtonColor" onclick="RemoveIframeElementMinesweeper()">
+        <button id="closeButtonMinesweeper" class="hidden audiowidefont gameButtonColor gameButtonStyle" onclick="RemoveIframeElementMinesweeper()">
             Close Minesweeper Game
         </button>
     </div>
@@ -51,10 +51,10 @@
         </h2>    
         <h3 class="monacofont">Calm and collected minds can thrive with this game. How fast can you find all the words?</h3>
         <div id="displayWordSearch"></div>
-        <button id="playButtonWordSearch" class="audiowidefont gameButtonColor" onclick="CreateIframeElementWordSearch()">
+        <button id="playButtonWordSearch" class="audiowidefont gameButtonColor gameButtonStyle" onclick="CreateIframeElementWordSearch()">
             Play Word Search Game
         </button>
-        <button id="closeButtonWordSearch" class="hidden audiowidefont gameButtonColor" onclick="RemoveIframeElementWordSearch()">
+        <button id="closeButtonWordSearch" class="hidden audiowidefont gameButtonColor gameButtonStyle" onclick="RemoveIframeElementWordSearch()">
             Close Word Search Game
         </button>
     </div>
@@ -75,3 +75,151 @@
       <h7 class="a">MarvinMartian - 31pts</h7>
   </div>
 </div>
+
+{{!-- //This is entire iFrame code for the games. all 4 games are included in this code. --}}
+<script>
+    //Snake Iframe creator
+const CreateIframeElementSnake = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://snake.googlemaps.com/`;
+    el.width = "100%";
+    el.height = "600px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("displaySnake").appendChild(el);
+}
+
+//Snake Iframe closer
+const RemoveIframeElementSnake = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("displaySnake")
+        .removeChild(document
+        .getElementById("displaySnake").lastChild);
+}
+  
+//Snake button controllers
+const playButtonSnake = document.getElementById('playButtonSnake');
+const closeButtonSnake = document.getElementById('closeButtonSnake');
+  
+playButtonSnake.addEventListener('click', () => {
+    playButtonSnake.classList.add('hidden');
+    closeButtonSnake.classList.remove('hidden');
+});
+
+closeButtonSnake.addEventListener('click', () => {
+    closeButtonSnake.classList.add('hidden');
+    playButtonSnake.classList.remove('hidden');
+});
+  
+//2048 Iframe creator
+const CreateIframeElement2048 = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://play2048.co/`;
+    el.width = "100%";
+    el.height = "800px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("display2048").appendChild(el);
+}
+
+//2048 Iframe closer
+const RemoveIframeElement2048 = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("display2048")
+        .removeChild(document
+        .getElementById("display2048").lastChild);
+}
+  
+//2048 button controllers
+const playButton2048 = document.getElementById('playButton2048');
+const closeButton2048 = document.getElementById('closeButton2048');
+  
+playButton2048.addEventListener('click', () => {
+    playButton2048.classList.add('hidden');
+    closeButton2048.classList.remove('hidden');
+});
+  
+closeButton2048.addEventListener('click', () => {
+    closeButton2048.classList.add('hidden');
+    playButton2048.classList.remove('hidden');
+});
+
+//Minesweeper Iframe creator
+const CreateIframeElementMinesweeper = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://minesweeper.one/`;
+    el.width = "100%";
+    el.height = "600px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("displayMinesweeper").appendChild(el);
+}
+
+//Minesweeper Iframe closer
+const RemoveIframeElementMinesweeper = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("displayMinesweeper")
+        .removeChild(document
+        .getElementById("displayMinesweeper").lastChild);
+}
+  
+//Minesweeper button controllers
+const playButtonMinesweeper = document.getElementById('playButtonMinesweeper');
+const closeButtonMinesweeper = document.getElementById('closeButtonMinesweeper');
+  
+playButtonMinesweeper.addEventListener('click', () => {
+    playButtonMinesweeper.classList.add('hidden');
+    closeButtonMinesweeper.classList.remove('hidden');
+});
+
+closeButtonMinesweeper.addEventListener('click', () => {
+    closeButtonMinesweeper.classList.add('hidden');
+    playButtonMinesweeper.classList.remove('hidden');
+});
+
+//WordSearch Iframe creator
+const CreateIframeElementWordSearch = () => {
+    // Creating iframe element.
+    let el = document.createElement("iframe");
+  
+    // setting the values for the attributes.
+    el.src = `https://word-search-puzzles.appspot.com/`;
+    el.width = "100%";
+    el.height = "600px";
+  
+    // Adding the created iframe to div as a child element
+    document.getElementById("displayWordSearch").appendChild(el);
+}
+
+//WordSearch Iframe closer
+const RemoveIframeElementWordSearch = () => {
+    // Remove the last child ( iframe element ) of div.
+    document.getElementById("displayWordSearch")
+        .removeChild(document
+        .getElementById("displayWordSearch").lastChild);
+}
+  
+//WordSearch button controllers
+const playButtonWordSearch = document.getElementById('playButtonWordSearch');
+const closeButtonWordSearch = document.getElementById('closeButtonWordSearch');
+  
+playButtonWordSearch.addEventListener('click', () => {
+    playButtonWordSearch.classList.add('hidden');
+    closeButtonWordSearch.classList.remove('hidden');
+});
+
+closeButtonWordSearch.addEventListener('click', () => {
+    closeButtonWordSearch.classList.add('hidden');
+    playButtonWordSearch.classList.remove('hidden');
+});
+
+  </script>

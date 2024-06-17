@@ -6,14 +6,16 @@ const Game = require('../models/game');
 const getProfile = async (req, res) => {
   try {
     const user = req.session.user;
-    // Find all scores of the user, including game details
-    const scores = await Score.findAll({
-      where: { userId: user.id },
-      include: [Game],
-    });
+    
+    // todo, make this work: Find all scores of the user, including game details
+    // const scores = await Score.findAll({
+    //   where: { userId: user.id },
+    //   include: [Game],
+    // });
     // Render the dashboard view with the user details and their scores
-    res.render('dashboard', { user, scores });
+    res.render('dashboard', { user });
   } catch (error) {
+    console.error(error);
     // Handle errors when fetching the profile
     res.status(500).json({ error: 'Error fetching profile' });
   }

@@ -1,5 +1,17 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
+
+// Load configuration from config.json
+const config = require('./config.json')['development'];
+
+// Session middleware setup
+app.use(session({
+    secret: config.session.secret,  // Use the session secret from your config file
+    resave: false,
+    saveUninitialized: false
+    // Add other session options as needed
+}));
 
 app.use(express.static('public'));
 
@@ -27,9 +39,11 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('', isAuthenticated, (req, res) => {
-    res.send('');
+app.get('/protected-route', isAuthenticated, (req, res) => {
+    res.send('This is a protected route');
 })
 
 //error handling middleware
 app.use(errorHandler);
+
+module.exports = app;

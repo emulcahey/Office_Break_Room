@@ -45,14 +45,24 @@
             </div>
         </div>
     </div>
-    <div class="row">
-         <div class="col-lg-2">
-            {{#if loggedIn}}
-        <button onclick="window.location.href='/logout'" class="gameButtonStyle">Logout</button>
-            {{/if}}
-        </div>
-    </div>        
-    
+            
+            {{!-- <div class="col-lg-6">
+                <h1 class="audiowidefont">Take a break!</h1>
+            </div>
+            <div class="col-lg-3" id="stopwatch">
+                <div id="stopwatch">00:00:00</div>
+                <div class="controls">
+                    <button onclick="startStopwatch()">Start</button>
+                    <button onclick="stopStopwatch()">Stop</button>
+                    <button onclick="resetStopwatch()">Reset</button>
+                    <button onclick="toggleDarkMode()">Dark/Light</button>
+                    <button onclick="window.location.href='/logout'">Logout</button>
+                </div>
+            </div>
+        </div> --}}
+    {{!-- </div> --}}
+
+
     <script>
         let stopwatchInterval;
         let elapsedTime = 0;

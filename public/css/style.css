@@ -29,6 +29,10 @@ h7.a{
   background-color: #68c7c1; 
 }
 
+.dark-mode{
+  background-color: #032b27;
+}
+
 /* basic button colors */
 .gameButtonStyle{
   background-color: #F57F5B;

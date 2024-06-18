@@ -1,5 +1,4 @@
 # Office_Break_Room
-Game manager website.
 
 ## Description
 
@@ -9,7 +8,6 @@ Some times office workers need to take a break from a day filled with constant w
 
 - [Features](#features)
 - [Usage](#usage)
-- [Tests](#tests)
 - [Credits](#credits)
 - [License](#license)
 
@@ -31,22 +29,27 @@ On the main page, the user can see the listed games. When the user clicks on one
 
 At the top of the page toward the right side, there is a Timer function. The Timer allows the user to select a time from pre-set options. Once a time is selected, the Timer keeps track and counts down. This allows the user to not get lost in a game and loose track of time. Once the Timer reaches Zero, it will send an alert to the user that their break/game time should be over.
 
-Add screenshots
+Deployed Link: https://office-break-room.onrender.com
 
-![alt text](public/images/screenshot.png) 
-![alt text](public/images/screenshot.png)
-![alt text](public/images/screenshot.png)
-![alt text](public/images/screenshot.png)
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+![screenshot of light mode login screen](public/images/lightlogin.png) 
+![screenshot of dark mode login screen](public/images/darklogin.png)
+![screenshot of light mode game dashboard screen](public/images/screenshot.png)
+![screenshot of dark mode game dashboard screen](public/images/screenshot.png)
+![screenshot of full page dark mode dashboard screen with a game iframe](public/images/fulldashwithgame.png)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-If you followed tutorials, include links to those here as well.
+collaborators:
+*Austin Lee, 
+*Juliette Ngum,
+*Matthew Prois,
+*Solomiia Trachuk	
+
+Application websites:
+*Snake by GoogleMaps Game   https://snake.googlemaps.com/
+*2048 Game   https://play2048.co/
+*Minesweeper Game   https://minesweeper.one/
+*Word Search Game   https://word-search-puzzles.appspot.com/
 
 ## License
 

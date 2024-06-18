@@ -20,5 +20,7 @@ router.get('/login', (req, res) => res.render('auth/login'));
 // Route to render the registration page
 router.get('/register', (req, res) => res.render('auth/signup'));
 
+//logout route
+// res.render('header', { loggedIn: req.isAuthenticated() });
 
 module.exports = router;

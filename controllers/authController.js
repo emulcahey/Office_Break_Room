@@ -14,7 +14,7 @@ const register = async (req, res) => {
 
     // Store the user in the session and redirect to the dashboard
     req.session.user = user;
-    res.redirect('/dashboard');
+    res.redirect('../users/dashboard');
   } catch (error) {
     console.error(error);
     // Handle errors during registration

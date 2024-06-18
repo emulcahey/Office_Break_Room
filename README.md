@@ -33,8 +33,8 @@ Deployed Link: https://office-break-room.onrender.com
 
 ![screenshot of light mode login screen](public/images/lightlogin.png) 
 ![screenshot of dark mode login screen](public/images/darklogin.png)
-![screenshot of light mode game dashboard screen](public/images/screenshot.png)
-![screenshot of dark mode game dashboard screen](public/images/screenshot.png)
+![screenshot of light mode game dashboard screen](public/images/lightdash.png)
+![screenshot of dark mode game dashboard screen](public/images/darkdash.png)
 ![screenshot of full page dark mode dashboard screen with a game iframe](public/images/fulldashwithgame.png)
 
 ## Credits

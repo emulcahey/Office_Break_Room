@@ -41,7 +41,9 @@
             </div>
             <div class="col-md-3">
                 <button onclick="toggleDarkMode()" class="controls gameButtonStyle">Dark/Light</button>
-                <button onclick="window.location.href='/logout'" class="gameButtonStyle">Logout</button>
+                {{if loggedIn}}    
+                    <button onclick="window.location.href='/logout'" class="gameButtonStyle">Logout</button>
+                {{ /if }}
             </div>
         </div>
     </div>
